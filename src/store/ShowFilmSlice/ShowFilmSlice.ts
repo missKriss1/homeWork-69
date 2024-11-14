@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { AxiosResponse } from "axios";
-import axiosApi from '../../axiosApi.ts';
-import { Show, ShowBlock } from '../../types';
+import axiosApi from "../../axiosApi.ts";
+import { Show, ShowBlock } from "../../types";
 
 interface ShowState {
   shows: Show[];

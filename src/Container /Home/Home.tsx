@@ -1,11 +1,10 @@
-
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
-import { useNavigate } from 'react-router-dom';
-import { AppDispatch, RootState } from '../../app/store.ts';
-import { fetchShowFilmAll } from '../../store/ShowFilmSlice/ShowFilmSlice.ts';
-import { Show } from '../../types';
+import { useNavigate } from "react-router-dom";
+import { AppDispatch, RootState } from "../../app/store.ts";
+import { fetchShowFilmAll } from "../../store/ShowFilmSlice/ShowFilmSlice.ts";
+import { Show } from "../../types";
 
 const Home = () => {
   const shows = useSelector((state: RootState) => state.show.shows);

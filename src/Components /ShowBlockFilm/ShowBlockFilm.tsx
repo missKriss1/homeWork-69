@@ -1,11 +1,10 @@
-import { Link, useParams } from 'react-router-dom';
-import { AppDispatch, RootState } from '../../app/store.ts';
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { fetchFilmByInfo } from '../../store/ShowFilmSlice/ShowFilmSlice.ts';
-import Spinner from '../Spinner/Spinner.tsx';
-import Home from '../../Container /Home/Home.tsx';
-
+import { Link, useParams } from "react-router-dom";
+import { AppDispatch, RootState } from "../../app/store.ts";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { fetchFilmByInfo } from "../../store/ShowFilmSlice/ShowFilmSlice.ts";
+import Spinner from "../Spinner/Spinner.tsx";
+import Home from "../../Container/Home/Home.tsx";
 
 const ShowFilmBlock = () => {
   const params = useParams();
@@ -28,10 +27,10 @@ const ShowFilmBlock = () => {
     <>
       {loading ? (
         <Spinner />
-      ):(
+      ) : (
         <>
-          <Home/>
-          <hr/>
+          <Home />
+          <hr />
           <div className="row mt-5">
             <div className="col-4">
               <img
@@ -42,12 +41,14 @@ const ShowFilmBlock = () => {
             </div>
             <div className="col-8 mt-4">
               <h1>{showBlock.name}</h1>
-              <div dangerouslySetInnerHTML={{__html: showBlock.summary}}/>
+              <div dangerouslySetInnerHTML={{ __html: showBlock.summary }} />
             </div>
           </div>
-          <hr/>
+          <hr />
           <div className="mt-4">
-            <Link to='/' className="btn-primary btn">Back</Link>
+            <Link to="/" className="btn-primary btn">
+              Back
+            </Link>
           </div>
         </>
       )}
