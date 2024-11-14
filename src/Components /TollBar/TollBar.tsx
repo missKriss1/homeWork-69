@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const TollBar = () => {
   return (
     <div>
@@ -5,7 +7,7 @@ const TollBar = () => {
         <nav className="navbar navbar-dark bg-primary ">
           <div className="container-fluid d-flex justify-content-between">
             <div>
-              <h1 className="navbar-brand text-white fw-bold">TV shows</h1>
+                <Link to='/' className="navbar-brand text-white fw-bold">TV shows</Link>
             </div>
           </div>
         </nav>
